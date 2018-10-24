@@ -34,7 +34,9 @@ export default {
         background #ffffff
         font-size 24px
         border-bottom 1px solid rgba(0,0,0,.06)
-    &:hover
+
+    // 此处修改 &    
+    .todo-item:hover
         .destroy:after {
             content: 'x'
         }
@@ -64,13 +66,13 @@ export default {
         appearance none
     }
     .toggle:before{
-        content:url('../assets/images/done.svg')
+        content:url('../assets/images/round.svg')
         position absolute
         left 12px
         cursor pointer
     }
     .toggle:checked:before{
-        content : url('../assets/images/round.svg')
+        content : url('../assets/images/done.svg')
         position absolute
         left 12px
         cursor pointer
