@@ -1,7 +1,8 @@
 {
   "name": "vuewebpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "慕课学习记录",
+  "repository": "https://github.com/Benleie/vueWebpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,8 +15,8 @@
     "autoprefixer": "^7.2.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "browserslist": "^3.2.0",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "postcss-loader": "^2.0.9",
     "prettier": "^1.12.1",
     "stylus": "^0.54.5",

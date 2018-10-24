@@ -2,6 +2,8 @@
 
 和[课程](https://www.imooc.com/learn/935)完全一致的配置！
 
+"dependencies"和"devDependencies"都随意，主要看有没有兴趣用`- D`.安装的库是默认`--save`的。
+
 
 
 ## 错误
