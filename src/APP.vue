@@ -3,7 +3,6 @@
         <div id="cover">
             <Header></Header>
             <Todo></Todo>
-            <Click></Click>
             <Footer></Footer>
         </div>
     </div>
@@ -12,13 +11,11 @@
 <script>
 import Header from './todo/header.vue'
 import Todo from './todo/todo.vue'
-import Click from './todo/click.vue'
 import Footer from './todo/footer.jsx'
 export default {
    components: {
        Header,
        Todo,
-       Click,
        Footer
    }
 }
@@ -40,6 +37,6 @@ export default {
        bottom 0
        background-color #999
        opacity .9
-       z-index -1
+    //    z-index -1
    }
 </style>
