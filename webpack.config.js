@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HTMLPlugin = require('html-webpack-plugin')
 const ExtractPlugin = require("extract-text-webpack-plugin")
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === "development"
 
@@ -89,6 +90,7 @@ if(isDev) {
     })
 
     config.plugins.push(
+        new CleanWebpackPlugin(['dist']), //清除之前build的dist
         new ExtractPlugin('styles.[contentHash:8].css'),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor'
