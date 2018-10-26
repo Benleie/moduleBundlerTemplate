@@ -1,0 +1,29 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "description": "learn vue ssr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benleie/vueWebpack.git"
+  },
+  "keywords": [
+    "learn",
+    "vue",
+    "ssr"
+  ],
+  "author": "ben leie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benleie/vueWebpack/issues"
+  },
+  "homepage": "https://github.com/Benleie/vueWebpack#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "vue": "^2.5.17",
+    "vue-server-renderer": "^2.5.17"
+  }
+}
