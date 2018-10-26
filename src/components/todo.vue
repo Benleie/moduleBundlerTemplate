@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     addTodo(e) {
-      console.log(e.target.value);
+      // console.log(e.target.value);
       this.todos.unshift({
         id: id++,
         content: e.target.value.trim(),
