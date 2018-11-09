@@ -20,13 +20,7 @@ const config = {
 					options: { limit: 1024, name: "[name]-new.[ext]" }
 				}]
 			},
-			{
-				test: /.css$/,
-				use: [
-					'style-loader',
-					'css-loader',
-				]
-			},
+			
 			{
 				// 专供iconfont方案使用的，后面会带一串时间戳，需要特别匹配到
 				test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
@@ -58,15 +52,15 @@ if(isDev){
 	},
 	config.module.rules.push(
 		{
-			test: /.s[ca]ss$/,
+			test: /(.scss|.css)$/,
 			use: [
 				'style-loader',
 				'css-loader',
 				{
 					loader: "postcss-loader",
-					/* options: {
-						sourceMap: true
-					} */
+					options: {
+						// sourceMap: true
+					}
 				},
 				'sass-loader'
 			]
