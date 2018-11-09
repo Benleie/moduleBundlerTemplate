@@ -42,7 +42,7 @@ if(isDev) {
         port: 8000,
         host: '0.0.0.0',
         overlay: {
-            errors:true
+            errors:true    //将错误显示到浏览器
         },
         // open:true
         hot: true
