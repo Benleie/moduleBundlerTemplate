@@ -1,3 +1,4 @@
+const path = require('path')
 const HTMLPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
@@ -5,10 +6,16 @@ const isDev = process.env.NODE_ENV === "development"
 
 const config = {
 	target:"web",
-	entry: require('path').join(__dirname, 'src/index.js'),
+	entry: path.join(__dirname, 'src/index.js'),
 	output: {
 		filename: "bundle.js",
-		path: require('path').join(__dirname, "dist")
+		path: path.join(__dirname, "dist")
+	},
+	resolve: {
+		alias:{
+			"@src": path.resolve('src'),
+			"@scss": path.resolve("assets/scss")
+		}
 	},
 	module:{
 		rules:[
@@ -50,6 +57,7 @@ if(isDev){
 		// open:true
 		hot: true
 	},
+	
 	config.module.rules.push(
 		{
 			test: /(.scss|.css)$/,
