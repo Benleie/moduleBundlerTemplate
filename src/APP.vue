@@ -5,6 +5,7 @@
             <Todo></Todo>
             <Footer></Footer>
         </div>
+
     </div>
 </template>
 
@@ -13,11 +14,11 @@ import Header from './todo/header.vue'
 import Todo from './todo/todo.vue'
 import Footer from './todo/footer.jsx'
 export default {
-   components: {
+    components: {
        Header,
-       Todo,
+       Todo, 
        Footer
-   }
+    }
 }
 </script>
 
