@@ -1,3 +1,5 @@
+使用@vue/cli创建新项目
+`vue create vue3-vuecli -m npm`
 
 ## 特点
 + 和[imooc课程](https://www.imooc.com/learn/935)完全一致的配置！
