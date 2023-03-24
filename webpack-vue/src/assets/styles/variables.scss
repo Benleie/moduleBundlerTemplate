@@ -1,0 +1,165 @@
+:root {
+  // size variables
+  --le-s-1: 4px;
+  --le-s-2: 8px;
+  --le-s-3: 12px;
+  --le-s-4: 16px;
+  --le-s-5: 20px;
+  --le-s-6: 24px;
+  --le-s-7: 28px;
+  --le-s-8: 32px;
+  --le-s-9: 36px;
+  --le-s-10: 40px;
+
+  // line variables
+  --le-line-normal: 1px;
+  --le-line-bolder: 2px;
+  --le-line-bold: 3px;
+
+  // border
+  --le-border-radius-base: 6px;
+  --le-border-width-base: 1px;
+  --le-border-width-bolder: 2px;
+  --le-border-style-normal: solid;
+  --le-border-style-dashed: dashed;
+  --le-border-brand: var(--le-border-width-bolder) var(--le-border-style) var(--le-color-brand);
+
+  // box-shadow
+  --le-box-shadow-1: 0 30px 40px 0 rgba(138, 138, 138, 20%);
+  --le-box-shadow-2: 0 10px 40px 0 rgba(138, 138, 138, 20%);
+
+  // color
+  --le-color-white: #fff;
+  --le-color-black: #000;
+  --le-color-brand: #f39b15;
+  --le-bg-color-white: #fff;
+  --le-bg-color-soft: #f5f5f5;
+  --le-bg-color-black: #262626;
+  --le-bg-color-black-lighter: #3c3c3c;
+
+  // font-family
+  --le-font-family: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont,
+    'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  // font-size
+  --le-font-size-display-3: 56px;
+  --le-font-size-display-2: 48px;
+  --le-font-size-display-1: 36px;
+  --le-font-size-headline: 24px;
+  --le-font-size-extra-large: 20px;
+  --le-font-size-large: 18px;
+  --le-font-size-medium: 16px;
+  --le-font-size-base: 14px;
+  --le-font-size-small: 13px;
+  --le-font-size-extra-small: 12px;
+
+  // font-weight
+  --le-font-weight-light: 200;
+  --le-font-weight-lighter: 300;
+  --le-font-weight-normal: 400;
+  --le-font-weight-primary: 500;
+  --le-font-weight-bolder: 600;
+  --le-font-weight-bold: 700;
+
+  // line-height
+  --le-line-height-normal: 20px;
+  --le-line-height-higher: 22px;
+  --le-line-height-high: 24px;
+
+  // text-color
+  --le-text-color-darker: #333;
+  --le-text-color-normal: #666;
+  --le-text-color-lighter: #999;
+  --le-text-color-white: #fff;
+  --le-text-color-white-soft: rgba(255, 255, 255, 30%);
+  --le-text-color-white-mute: rgba(255, 255, 255, 60%);
+
+  // z-index
+  --le-z-index-normal: 1;
+  --le-z-index-top: 1000;
+  --le-z-index-popper: 2000;
+
+  // sidebar
+  --sidebar-color-active: #000;
+  --sidebar-background-color-active: #fff;
+}
+
+// size variables
+$s-1: var(--le-s-1);
+$s-2: var(--le-s-2);
+$s-3: var(--le-s-3);
+$s-4: var(--le-s-4);
+$s-5: var(--le-s-5);
+$s-6: var(--le-s-6);
+$s-7: var(--le-s-7);
+$s-8: var(--le-s-8);
+$s-9: var(--le-s-9);
+$s-10: var(--le-s-10);
+
+// line variables
+$line-1: var(--le-line-normal);
+$line-2: var(--le-line-bolder);
+$line-3: var(--le-line-bold);
+
+// border
+$border-radius-base: var(--le-border-radius-base);
+$border-width-base: var(--le-border-width-base);
+$border-width-bolder: var(--le-border-width-bolder);
+$border-style-normal: var(--le-border-style-normal);
+$border-style-dashed: var(--le-border-style-dashed);
+$border-brand: var(--le-border-brand);
+
+// box-shadow
+$shadow-1: var(--le-box-shadow-1);
+$shadow-2: var(--le-box-shadow-2);
+
+// color
+$color-white: var(--le-color-white);
+$color-black: var(--le-color-black);
+$color-brand: var(--le-color-brand);
+$bg-color-white: var(--le-bg-color-white);
+$bg-color-soft: var(--le-bg-color-soft);
+$bg-color-black: var(--le-bg-color-black);
+$bg-color-black-lighter: var(--le-bg-color-black-lighter);
+
+// font-family
+$font-family: var(--le-font-family);
+
+// font-size
+$display-3: var(--le-font-size-display-3);
+$display-2: var(--le-font-size-display-2);
+$display-1: var(--le-font-size-display-1);
+$headline: var(--le-font-size-headline);
+$extra-large: var(--le-font-size-extra-large);
+$large: var(--le-font-size-large);
+$medium: var(--le-font-size-medium);
+$base: var(--le-font-size-base);
+$small: var(--le-font-size-small);
+$extra-small: var(--le-font-size-extra-small);
+
+// font-weight
+$light: var(--le-font-weight-light);
+$lighter: var(--le-font-weight-lighter);
+$normal: var(--le-font-weight-normal);
+$primary: var(--le-font-weight-primary);
+$bolder: var(--le-font-weight-bolder);
+$bold: var(--le-font-weight-bold);
+
+// line-height
+$line-height-normal: var(--le-line-height-normal);
+$line-height-higher: var(--le-line-height-higher);
+$line-height-high: var(--le-line-height-high);
+
+// text-color
+$text-darker: var(--le-text-color-darker);
+$text-normal: var(--le-text-color-normal);
+$text-lighter: var(--le-text-color-lighter);
+$text-white: var(--le-text-color-white);
+$text-white-soft: var(--le-text-color-white-soft);
+$text-white-mute: var(--le-text-color-white-mute);
+
+// z-index
+$z-index-normal: var(--le-z-index-normal);
+$z-index-top: var(--le-z-index-top);
+$z-index-popper: var(--le-z-index-popper);

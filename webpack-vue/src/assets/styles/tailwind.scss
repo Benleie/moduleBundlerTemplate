@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  // 解决 tailwindcss/base 设置的 button background-color: transparent 导致的按钮无背景色
+  button,
+  .button,
+  input[type='button'],
+  input[type='reset'],
+  input[type='submit'] {
+    background-color: var(--el-button-bg-color) !important;
+  }
+}

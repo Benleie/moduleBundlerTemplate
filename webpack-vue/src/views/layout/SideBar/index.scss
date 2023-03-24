@@ -1,0 +1,10 @@
+@import '../../../assets/styles/variables';
+
+.page-layout-side-bar {
+  position: relative;
+  flex-shrink: 0;
+  width: 192px;
+  padding-top: 30px;
+  background-color: $bg-color-white;
+  overflow: auto;
+}
