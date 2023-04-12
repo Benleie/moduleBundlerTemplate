@@ -51,7 +51,7 @@ module.exports = {
         loader: 'vue-loader',
       },
       {
-        test: /\.(tsx|ts|jsx|js)$/,
+        test: /\.(tsx|ts|jsx|js|mjs)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
