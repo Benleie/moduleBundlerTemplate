@@ -3,12 +3,10 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        targets: {
-          edge: '17',
-          firefox: '37',
-          chrome: '67',
-          safari: '11.1',
-        },
+        targets: [
+          "default",
+          "since 2017-12"
+        ],
         useBuiltIns: 'entry',
         corejs: '3',
       },

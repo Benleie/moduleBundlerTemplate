@@ -5,6 +5,11 @@ import * as ElementIcons from '@element-plus/icons-vue';
 import router from './controller/router';
 import icons from './assets/icons';
 import './assets/styles/main.scss';
+import 'core-js';
+
+console.log('test firefox54');
+console.log(['ff'].includes(''));
+console.log('ffff ff  '.trimEnd());
 
 const app = createApp(App);
 

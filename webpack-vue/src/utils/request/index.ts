@@ -11,6 +11,9 @@ const service = axios.create({
 });
 setInterceptor(service);
 
+console.log('hhh', 'hhh'.trimEnd());
+console.log('hhh'.trimEnd());
+
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 function request(
