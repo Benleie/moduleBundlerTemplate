@@ -10,4 +10,9 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11', 'firefox >= 37'],
     }),
   ],
+  resolve: {
+    alias: {
+      'vue': 'vue/dist/vue.esm-bundler.js',
+    },
+  },
 })
