@@ -12,6 +12,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      // https://github.com/Benleie/moduleBundlerTemplate/issues/3
       'vue': 'vue/dist/vue.esm-bundler.js',
     },
   },
