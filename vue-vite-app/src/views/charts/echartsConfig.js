@@ -11,40 +11,67 @@ const options = {
     left: 0,
     top: 0
   },
-  tooltip: {
+  tooltip: {           
     order: 'valueDesc',
+    valueFormatter: (value) => {
+      return value + `(${value / 1000}%)`
+    },
     trigger: 'axis',
     axisPointer: {
       type: "shadow"
-    }
+    } 
   },
   xAxis: {
     type: 'category',
-    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    boundaryGap: false,
+    min: -2,
+    max: 8,
+    axisTick: {
+      alignWithLabel: true
+    },
+    data: ['20210901', '20210902', '20210903', '20210904', '20210905', '20210906']
   },
-  yAxis: {
-    name: '单位（元）'
-  },
+  yAxis: [
+    {
+      type: 'value',
+      name: '单位（元）',
+      position: 'left',
+      boundaryGap: ['0', '5%']
+    },
+    {
+      type: 'category',
+      name: 'percent',
+      position: 'right',
+      // data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+    },
+  ],
   series: [
     {
       name: '数据一',
       type: 'bar',
-      data: [20, 20, 36, 10, 10, 20]
+      data: [
+        { value: 50000, name: '单位（元）' },
+        { value: 50000, name: 'percent' },
+        { value: 50000, name: 'percent' },
+        { value: 50000, name: 'percent' },
+        { value: 50000, name: 'percent' },
+        { value: 50000, name: 'percent' }
+      ]
     },
     {
       name: '数据二',
       type: 'bar',
-      data: [5, 20, 36, 10, 10, 20]
+      data: [30000, 30000, 30000, 30000, 30000, 30000]
     },
     {
       name: '数据三',
       type: 'bar',
-      data: [30, 20, 36, 10, 10, 20]
+      data: [40000, 40000, 40000, 40000, 40000, 40000]
     },
     {
       name: '数据四',
       type: 'bar',
-      data: [5, 20, 36, 10, 10, 20]
+      data: [-20000, -20000, -20000, -20000, -20000, -20000]
     }
   ]
 }
