@@ -1,5 +1,5 @@
 import HelloWorld from '../components/HelloWorld.vue'
-import StudentQuery from '../views/student-query/student-query.vue';
+import StudentQuery from '@/views/student-query/student-query.vue';
 import Chart from '../views/charts/first.vue';
 const About = { template: '<div>About</div>' }
 
