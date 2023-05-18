@@ -21,7 +21,7 @@ onMounted(() => {
   color: #888;
 }
 #main {
-  width: 600px;
+  width: 800px;
   height: 500px;
 }
 </style>
