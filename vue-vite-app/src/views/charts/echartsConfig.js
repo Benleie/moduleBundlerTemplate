@@ -1,6 +1,6 @@
 import * as echarts from 'echarts';
 
-const options = {
+const barOptions = {
   color: ['#2F54EB', '#722ED1', '#EB2F96', '#52C41A', '#fff'],
   title: {
     // text: 'ECharts 入门示例'
@@ -75,9 +75,49 @@ const options = {
     }
   ]
 }
+
+const pieOptions = {
+  color: ['#2F54EB', '#722ED1', '#EB2F96', '#52C41A', '#fff'],
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    // orient: 'vertical',
+    left: 'left'
+  },
+  series: [
+    {
+      name: '2021.09.01-2021.09.06',
+      type: 'pie',
+      radius: '50%',
+      label: {
+        alignTo: 'edge',
+        color: 'inherit',
+        formatter: '{b}: {c}',
+        minMargin: 5,
+        edgeDistance: 10,
+        lineHeight: 15,
+      },
+      data: [
+        { value: 64, name: '类型一' },
+        { value: 12, name: '类型二' },
+        { value: 12, name: '类型三' },
+        { value: 12, name: '类型四' }
+      ],
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+};
+
 // 基于准备好的dom，初始化echarts实例
 export const initChart = () => {
   var myChart = echarts.init(document.getElementById('main'));
   // 绘制图表
-  myChart.setOption(options);
+  myChart.setOption(pieOptions);
 }
