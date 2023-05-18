@@ -83,7 +83,10 @@ const pieOptions = {
   },
   legend: {
     // orient: 'vertical',
-    left: 'left'
+    orient: 'horizontal',
+    left: 0,
+    top: 0
+    // left: 'left'
   },
   series: [
     {
@@ -115,9 +118,57 @@ const pieOptions = {
   ]
 };
 
+const ringOptions = {
+  color: ['#2F54EB', '#722ED1', '#EB2F96', '#52C41A', '#999'],
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    top: '5%',
+    left: 'center'
+  },
+  series: [
+    {
+      name: '2021.09.01-2021.09.06',
+      type: 'pie',
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        alignTo: 'edge',
+        color: 'inherit',
+        formatter: '{b}: {c}',
+        minMargin: 5,
+        edgeDistance: 10,
+        lineHeight: 15,
+      },
+      // emphasis: {
+      //   label: {
+      //     show: true,
+      //     fontSize: 40,
+      //     fontWeight: 'bold'
+      //   }
+      // },
+      labelLine: {
+        // show: false
+      },
+      data: [
+        { value: 64, name: '类型一' },
+        { value: 12, name: '类型二' },
+        { value: 12, name: '类型三' },
+        { value: 12, name: '类型四' }
+      ],
+    }
+  ]
+};
+
 // 基于准备好的dom，初始化echarts实例
 export const initChart = () => {
   var myChart = echarts.init(document.getElementById('main'));
   // 绘制图表
-  myChart.setOption(pieOptions);
+  myChart.setOption(ringOptions);
 }
