@@ -26,6 +26,7 @@ const handleExport = (scope) => {
 </script>
 
 <template>
+  <div class="color">hhh</div>
   <el-button :disabled="tableLoading" @click="handleSearch">搜索</el-button>
   <el-table :data="listData" border style="width: 100%;margin-top:20px;">
     <el-table-column prop="date" label="Date" width="180" />
@@ -41,6 +42,11 @@ const handleExport = (scope) => {
   </el-table>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.color {
+  $color: #EB2F96;
+  background-color: rgba($color, 0.1);
+  color: $color;
+  margin-bottom: 20px;
+}
 </style>
