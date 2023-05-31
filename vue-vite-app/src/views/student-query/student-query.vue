@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import { getStudentData }  from '../../api/student'
+import { getStudentData } from '../../api/student'
+
 defineProps({
   msg: String,
 })
