@@ -53,6 +53,7 @@ const handleExport = (scope) => {
   --pink-color: #{$pick-color};
   // TODO: 怎么把css变量变成scss变量，从而用于Sass functions https://github.com/sass/sass/issues/2246
   $color: var(--pink-color);
+  @debug "#{$color}";
   background-color: rgba($color, 1);
   color: $color;
   margin-bottom: 20px;
@@ -60,6 +61,7 @@ const handleExport = (scope) => {
 .color-opacity {
   $pinkColor: #EB2F96;
   background-color: rgba($pinkColor, 0.1);
+  @debug "#{rgba($pinkColor, 0.1)}";
   color: $pinkColor;
 }
 </style>
