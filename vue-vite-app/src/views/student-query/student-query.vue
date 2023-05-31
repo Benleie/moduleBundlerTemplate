@@ -28,6 +28,7 @@ const handleExport = (scope) => {
 
 <template>
   <div class="color">hhh</div>
+  <div class="color-opacity">standard</div>
   <el-button :disabled="tableLoading" @click="handleSearch">搜索</el-button>
   <el-table :data="listData" border style="width: 100%;margin-top:20px;">
     <el-table-column prop="date" label="Date" width="180" />
@@ -45,9 +46,20 @@ const handleExport = (scope) => {
 
 <style lang="scss" scoped>
 .color {
-  $color: #EB2F96;
-  background-color: rgba($color, 0.1);
+  $pick-color: #EB2F96;
+  // :root {
+  //   --pink-color: #{$pick-color};
+  // }
+  --pink-color: #{$pick-color};
+  // TODO: 怎么把css变量变成scss变量，从而用于Sass functions https://github.com/sass/sass/issues/2246
+  $color: var(--pink-color);
+  background-color: rgba($color, 1);
   color: $color;
   margin-bottom: 20px;
+}
+.color-opacity {
+  $pinkColor: #EB2F96;
+  background-color: rgba($pinkColor, 0.1);
+  color: $pinkColor;
 }
 </style>
