@@ -21,5 +21,8 @@ module.exports = {
   rules: {
     'linebreak-style': ['error', 'windows'],
     semi: 0,
+    'vue/no-mutating-props': ['error', {
+      shallowOnly: true,
+    }],
   },
 };

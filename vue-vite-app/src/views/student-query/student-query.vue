@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { getStudentData } from '../../api/student'
+import Filter from './components/Filter.vue';
+import { getScoresList } from '../../api/student';
 
 defineProps({
   msg: String,
@@ -9,6 +11,12 @@ defineProps({
 // TODO: 与reactive的区别
 const listData = ref([])
 const tableLoading = ref(false)
+const formData = ref({
+  name: '',
+  math: '',
+  english: '',
+  chinese: '',
+})
 
 const handleSearch = async () => {
   tableLoading.value = true
@@ -24,9 +32,15 @@ const handleExport = (scope) => {
     scope.row.exportLoading = false
   }, 1000)
 }
+
+const getList = async () => {
+  const data = await getScoresList(formData.value)
+  console.log(data)
+}
 </script>
 
 <template>
+  <Filter :form-data="formData" @search="getList" />
   <div class="color">hhh</div>
   <div class="color-opacity">standard</div>
   <el-button :disabled="tableLoading" @click="handleSearch">搜索</el-button>

@@ -1,4 +1,6 @@
 // TODO: 随机生成data
+import { request } from './utils/request'
+
 // TODO: 放置到全局，供其他模板使用api
 const tableData = [
   {
@@ -23,12 +25,15 @@ const tableData = [
   },
 ]
 
-export const getStudentData = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const randomCount = Math.floor(Math.random()*4 + 1)
-      console.log(randomCount)
-      resolve(tableData.slice(0, randomCount))
-    }, 1000)
-  })
-}
+export const getStudentData = () => new Promise((resolve) => {
+  setTimeout(() => {
+    const randomCount = Math.floor(Math.random() * 4 + 1)
+    console.log(randomCount)
+    resolve(tableData.slice(0, randomCount))
+  }, 1000)
+})
+// TODO: PROXY
+export const getScoresList = (params) => request({
+  url: '/score/getScoreList',
+  params,
+})
