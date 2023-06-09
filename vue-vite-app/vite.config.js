@@ -18,4 +18,21 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  server: {
+    port: 9300,
+    open: true,
+    cors: true,
+    proxy: {
+      '/api': {
+        // target: 'localhost:3434',
+        target: 'http://localhost:3434',
+        // target: 'https://testauth.leyopharm.com',
+        // target: 'http://jsonplaceholder.typicode.com',
+        changeOrigin: true,
+        // rewrite: (proxyPath) => proxyPath.replace(/^\/ben-server/, ''),
+        // secure: false,
+        // ws: true,
+      },
+    },
+  },
 })

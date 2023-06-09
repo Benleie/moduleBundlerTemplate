@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const devAxios = axios.create({
-  baseURL: '127.0.0.1:3344',
+  baseURL: '/api',
   timeout: 5000,
 })
 export const request = (options) => {
