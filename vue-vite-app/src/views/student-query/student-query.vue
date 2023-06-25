@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import { getStudentData } from '../../api/student'
 import Filter from './components/Filter.vue';
 import { getScoresList } from '../../api/student';
 
@@ -20,11 +19,11 @@ const formData = ref({
 
 const handleSearch = async () => {
   tableLoading.value = true
-  const data = await getStudentData()
+  const { data } = await getScoresList(formData.value)
   tableLoading.value = false
   // 无需提前添加exportLoading属性
   // data.forEach(item => { item.exportLoading = false })
-  listData.value = data
+  listData.value = data.list.slice(0, 20)
 }
 const handleExport = (scope) => {
   scope.row.exportLoading = true
@@ -33,21 +32,20 @@ const handleExport = (scope) => {
   }, 1000)
 }
 
-const getList = async () => {
-  const data = await getScoresList(formData.value)
-  console.log(data)
-}
 </script>
 
 <template>
-  <Filter :form-data="formData" @search="getList" />
+  <Filter :form-data="formData" @search="handleSearch" />
   <div class="color">hhh</div>
   <div class="color-opacity">standard</div>
   <el-button :disabled="tableLoading" @click="handleSearch">搜索</el-button>
   <el-table :data="listData" border style="width: 100%;margin-top:20px;">
+    <el-table-column type="index" width="50" />
     <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" min-width="180" />
+    <el-table-column prop="studentName" label="Name" width="180" />
+    <el-table-column prop="chinese" label="chinese" min-width="180" />
+    <el-table-column prop="math" label="math" min-width="180" />
+    <el-table-column prop="english" label="english" min-width="180" />
     <el-table-column label="操作" min-width="180" >
       <template #default="scope">
         <el-button :disabled="scope.row.exportLoading" size="small" @click="handleExport(scope)"
