@@ -1,19 +1,33 @@
 <template>
-  <el-input v-model="filterText" placeholder="Filter keyword" />
+  <div class="example-box">
+    <el-input v-model="filterText" placeholder="Filter keyword" />
 
-  <el-tree
-    ref="treeRef"
-    class="filter-tree"
-    :data="data"
-    :props="defaultProps"
-    accordion
-    show-checkbox
-    node-key="id"
-    :default-expanded-keys="[2, 3]"
-    :default-checked-keys="[5]"
-    :filter-node-method="filterNode"
-    @node-expand="handleExpand"
-  />
+    <el-tree
+      ref="treeRef"
+      class="filter-tree"
+      :data="data"
+      :props="defaultProps"
+      accordion
+      show-checkbox
+      node-key="id"
+      :default-expanded-keys="[2, 3]"
+      :default-checked-keys="[5]"
+      :filter-node-method="filterNode"
+      @node-expand="handleExpand"
+    />
+  </div>
+  <div class="flex-box">
+    <div class="orange-container center-box">
+      <div class="orange-box">orange</div>
+      <div class="orange-box">orange</div>
+      <div class="orange-box">orange</div>
+      <div class="orange-box">orange</div>
+      <div class="orange-box">orange</div>
+    </div>
+    <div class="blue-box center-box">blue</div>
+    <div class="blue-box center-box">blue</div>
+  </div>
+  
 </template>
 
 <script lang="ts" setup>
@@ -116,3 +130,36 @@ const data: Tree[] = [
   },
 ]
 </script>
+
+<style lang="scss" scoped>
+.example-box {
+  border: 1px solid #666;
+  /* background-color: #eee; */
+}
+.flex-box {
+  display: flex;
+  width: 1300px;
+  padding: 50px;
+  margin-top: 50px;
+  border: 1px solid red;
+  .orange-container {
+    border: 1px solid orange;
+    flex: 1;
+    .orange-box {
+      width: 200px;
+    }
+  }
+  .blue-box {
+    flex-shrink: 0;
+    margin: 20px;
+    width: 200px;
+    height: 120px;
+    border: 1px solid blue;
+  }
+  .center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+</style>
